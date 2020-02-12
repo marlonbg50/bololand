@@ -72,7 +72,8 @@ include_once("config.php");
             include("pages/inicio.php");
         }
         ?>
-
+        
+       
         <footer class="bg-azul branco container-fluid py-5">
             <div class="row">
                 <div class="col-md-3">

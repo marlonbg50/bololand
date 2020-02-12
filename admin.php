@@ -15,6 +15,7 @@ include_once("config.php");
 
     <link rel="stylesheet" href="css/cores.css">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="index.php?pag=cad">
 </head>
 
 <script>
@@ -53,10 +54,11 @@ include_once("config.php");
 
                     <h6 class="sidebar-heading align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>Cadastros</span>
+                        
                     </h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="side()">
+                            <a class="nav-link" href="admin.php?pag=prod" onclick="side()">
                                 Produtos
                             </a>
                         </li>
@@ -76,6 +78,12 @@ include_once("config.php");
             </nav>
 
             <section class="col-12 col-md-10 d-block px-4 main" id="main">
+                <?php
+                    if (!empty($_GET)) 
+                    if ($_GET["pag"] == "prod")
+                    include("pages/formProduto.php");
+                    ?>
+           
                 <h2>Principal</h2>
             </section>
         </div>
